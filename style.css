@@ -1,0 +1,18 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    flex: auto;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    min-height: 512px;
+    max-width: 512px;
+}
+
+.box div {
+    
+}
