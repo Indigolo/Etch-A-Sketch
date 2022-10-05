@@ -1,18 +1,26 @@
 body {
-    height: 100vh;
+    height: 95vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+button {
+    width: 90px;
+    height: 32px;
+    margin-bottom: 24px;
 }
 
 .box{
     flex: auto;
     display: grid;
     grid-template-columns: repeat(var(--grid-columns), 1fr);
-    min-height: 512px;
-    max-width: 512px;
+    max-height: 960px;
+    min-width: 960px;
+    border: 1px solid gray;
 }
 
-.box div {
-    
+.toggled  {
+    background-color: black;
 }
