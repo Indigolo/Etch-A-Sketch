@@ -21,6 +21,7 @@ button {
     border: 1px solid gray;
 }
 
+
 .toggled  {
-    background-color: black;
+    background-color: rgb(var(--random-red), var(--random-green), var(--random-blue));
 }

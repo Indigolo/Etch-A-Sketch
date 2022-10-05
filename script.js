@@ -5,10 +5,30 @@ document.body.appendChild(gridBox);
 function createGrid(n){
     gridBox.style.setProperty('--grid-columns', n);
 
+    let darkness = 0;
+
     for(let i = 0; i < n ** 2; i++){
         const module = document.createElement('div');
 
-        module.addEventListener('mouseover', () => module.classList = 'toggled')
+        module.addEventListener('mouseover', () => {
+
+            const red = Math.random() * (256 - darkness * 25.6);
+            const green = Math.random() * (256 - darkness * 25.6);
+            const blue = Math.random() * (256 - darkness * 25.6);
+
+            module.style.setProperty('--random-red', red);
+            module.style.setProperty('--random-green', green);
+            module.style.setProperty('--random-blue', blue);
+
+            if(darkness == 10)
+            darkness = 0;
+
+            else
+            darkness += 1;
+
+            module.classList = 'toggled'
+        })
+
         gridBox.appendChild(module);
     }
 
